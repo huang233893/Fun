@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>米哈游原神官方网站</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="./img/one.jpg">
+</head>
+
+<body style="background-image: url(img/background.jpg);
+background-size: 100% ;
+background-attachment: fixed;" >
+    <div class="search-index">
+        <div class="search">点击下载 米哈游·原神</div>
+        <a href="./fun.html"
+            class="user">用 户</a>
+    </div>
+
+    <div class="focus">
+        <img src="./img/one.jpg" alt="">
+    </div>
+
+    <ul class="local-nav">
+        <li>介绍</li>
+        <li>下载</li>
+        <li>活动</li>
+        <li>新闻</li>
+        <li>关于我们</li>
+    </ul>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原神 米哈游</title>
+    <style>
+        .container {
+            width: 550px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            flex-shrink: 0;
+            width: 550px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+        }
+        .slide1 {
+            background-color: yellow;
+        }
+        .slide2 {
+            background-color: green;
+        }
+        .slide3 {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slider">
+            <div class="slide slide1">原神启动！</div>
+            <div class="slide slide2">我要玩原神！</div>
+            <div class="slide slide3">原神不能没有草神！</div>
+        </div>
+    </div>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const container = document.querySelector('.container');
+        const slider = document.querySelector('.slider');
+
+        function goToSlide(index) {
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+            slider.style.transform = `translateX(-${index * 550}px)`;
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            goToSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentIndex - 1);
+        }
+
+        setInterval(nextSlide, 3000); // 每3秒切换到下一张幻灯片
+
+        container.addEventListener('click', () => {
+            if (event.target === container) {
+                if (event.clientX > container.offsetWidth / 2) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        });
+    </script>
+</body>
+    <main>
+        <div class="product-list" id="product-list">
+            <!-- 商品列表 -->
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 MiHoYo 米哈游</p>
+    </footer>
+    <script src="script.js"></script>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+	</script>
+</body>
+</html>
+

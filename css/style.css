@@ -1,0 +1,169 @@
+﻿body {
+
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+/* 搜索框开始 */
+
+.search-index {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 540px;
+    min-width: 320px;
+    height: 44px;
+    background-color: #f6f6f6;
+}
+
+
+.search {
+    position: relative;
+    margin: 8px 10px;
+    height: 25px;
+    flex: 1;
+    font-size: 12px;
+    color: #666;
+    padding-left: 30px;
+    line-height: 23px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+
+
+}
+
+.search::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/search.png) no-repeat;
+    background-size: 18px auto;
+
+}
+
+.user {
+    width: 44px;
+    height: 44px;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+.user::before {
+
+    content: "";
+    display: block;
+    margin: 0 auto 0;
+    width: 25px;
+    height: 25px;
+    background: url(../img/user.png) no-repeat;
+    background-size: 25px;
+}
+
+/* 搜索栏结束 */
+/* 焦点图开始 */
+
+.focus img {
+    margin-top: 44px;
+    border-radius: 8px;
+    width: 100%;
+    height: 80px;
+}
+
+/* 焦点图烂尾 */
+/* 上方导航栏开始 */
+
+.local-nav {
+    display: flex;
+    height: 64px;
+    background-color: skyblue;
+    margin: 3px 4px;
+    border-radius: 8;
+}
+
+.local-nav li {
+    flex: 1;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product p {
+    color: #555;
+}
+
+.product button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background: #218838;
+}
+
